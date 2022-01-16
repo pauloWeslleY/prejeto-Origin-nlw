@@ -18,7 +18,7 @@ img {
 	height: auto;
 }
 
-/*============================ TODO: Variables ================================*/
+/*=== TODO: Variables ================================*/
 :root {
 	--header-height: 4.5rem;
 
@@ -34,7 +34,11 @@ img {
 	--body-color: hsl(0 0% 98%);
 }
 
-/*============================ TODO: Base ================================*/
+/*=== TODO: Base ================================*/
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font: 400 1rem 'DM Sans', sans-serif;
 	color: var(--text-color);
@@ -121,6 +125,19 @@ body {
 	width: 100%;
 }
 
+#header.scroll {
+	background: var(--base-color);
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+
+#hedaer.scroll .logo span {
+	color: white;
+}
+
+#header.scroll .icon-menu {
+	color: white;
+}
+
 main {
 	margin-top: calc(var(--header-height) + 2rem);
 }
@@ -178,6 +195,12 @@ nav ul li a:hover::after {
 nav .menu {
 	opacity: 0;
 	visibility: hidden;
+	top: -20rem;
+	transition: 0.2s;
+}
+
+nav .menu ul {
+	display: none;
 }
 
 /* === TODO: Mostra menu === */
@@ -193,11 +216,13 @@ nav.show .menu {
 	position: fixed;
 	top: 0;
 	left: 0;
-}
 
-nav.show .menu {
 	display: grid;
 	place-content: center;
+}
+
+nav.show .menu ul {
+	display: grid;
 }
 
 nav ul.grid {
@@ -216,13 +241,15 @@ nav .icon-close {
 	opacity: 0;
 
 	position: absolute;
+	top: -1.5rem;
 	right: 1.5rem;
-	/* transição bacana */
+	transition: 0.2s;
 }
 
 nav.show div.icon-close {
 	visibility: visible;
 	opacity: 1;
+	top: 1.5rem;
 }
 
 /*============================ TODO: HOME ================================*/
