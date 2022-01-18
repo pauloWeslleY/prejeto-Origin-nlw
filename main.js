@@ -32,7 +32,7 @@ window.addEventListener('scroll', function () {
    }
 })
 
-/* HACK: Pluign Testimonials Slider -> Carousel */
+/* HACK: Plugin Testimonials Slider -> Carousel */
 const swiper = new Swiper('.swiper', {
    slidesPerView: 1,
    pagination: {
@@ -41,3 +41,19 @@ const swiper = new Swiper('.swiper', {
    mousewheel: true,
    keyboard: true
 })
+
+/* HACK: Plugin ScrollReveal Mostrar element quando der scroll! */
+const scrollReveal = ScrollReveal({
+   origin: 'top',
+   distance: '30px',
+   duration: 700,
+   reset: true
+})
+
+scrollReveal.reveal(`
+   #home .image, #home .text,
+   #about .image, #about .text,
+   #services header, #services .card,
+   #testimonials header, #testimonials .testimonials,
+   #contact .text, #contact .links
+`, { interval: 100 })
