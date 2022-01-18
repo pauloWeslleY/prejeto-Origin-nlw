@@ -10,6 +10,12 @@
 		<!-- Icons -->
 		<link rel="stylesheet" href="assets/fonts/style.css" />
 
+		<!-- Swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+		/>
+
 		<!-- STYLES -->
 		<link rel="stylesheet" href="style.css" />
 		<!-- FONTS -->
@@ -21,6 +27,7 @@
 		/>
 	</head>
 	<body>
+		<!-- NOTE: Header -->
 		<header id="header">
 			<nav class="container">
 				<a class="logo" href="#">beauty<span>salon</span>.</a>
@@ -41,6 +48,7 @@
 		</header>
 
 		<main>
+			<!-- NOTE: Home -->
 			<section class="section" id="home">
 				<div class="container grid">
 					<div class="image">
@@ -60,6 +68,7 @@
 				</div>
 			</section>
 			<div class="divider-1"></div>
+			<!-- NOTE: About -->
 			<section class="section" id="about">
 				<div class="container grid">
 					<div class="image">
@@ -97,6 +106,7 @@
 				</div>
 			</section>
 			<div class="divider-2"></div>
+			<!-- NOTE: Services -->
 			<section class="section" id="services">
 				<div class="container grid">
 					<header>
@@ -139,8 +149,85 @@
 					</div>
 				</div>
 			</section>
+			<div class="divider-1"></div>
+			<!-- NOTE: Testimonials -->
+			<section class="section" id="testimonials">
+				<div class="container">
+					<header>
+						<h2 class="title">Depoimentos de quem já passou por aqui</h2>
+					</header>
+					<div class="testimonials swiper">
+						<!-- HACK: Swiper Wrapper -->
+						<div class="swiper-wrapper">
+							<!-- HACK: Slides -->
+							<div class="testimonial swiper-slide">
+								<blockquote>
+									<p>
+										<span>&ldquo;</span>
+										Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Velit rerum est numquam excepturi eos magni
+										non eligendi voluptates ea, tenetur aliquam sint
+										vel accusantium dolorem, neque
+									</p>
+									<cite>
+										<img
+											src="assets/photo/29.jpg"
+											alt="foto Wanessa Souza"
+										/>
+										Wanessa Souza
+									</cite>
+								</blockquote>
+							</div>
+							<div class="testimonial swiper-slide">
+								<blockquote>
+									<p>
+										<span>&ldquo;</span>
+										Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Velit rerum est numquam excepturi eos magni
+										non eligendi voluptates ea, tenetur aliquam sint
+										vel accusantium dolorem, neque
+									</p>
+									<cite>
+										<img
+											src="assets/photo/34.jpg"
+											alt="Foto de Caitlin Snow"
+										/>
+										Caitlin Snow
+									</cite>
+								</blockquote>
+							</div>
+							<div class="testimonial swiper-slide">
+								<blockquote>
+									<p>
+										<span>&ldquo;</span>
+										Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Velit rerum est numquam excepturi eos magni
+										non eligendi voluptates ea, tenetur aliquam sint
+										vel accusantium dolorem, neque
+									</p>
+									<cite>
+										<img
+											src="assets/photo/82.jpg"
+											alt="Foto de Cristine Maguie"
+										/>
+										Cristine Maguie
+									</cite>
+								</blockquote>
+							</div>
+						</div>
+						<!-- HACK: /Swiper Wrapper -->
+
+						<!-- TODO: If we need pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<!-- NOTE: Contact -->
 		</main>
 
+		<!-- SwiperJS -->
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+		<!-- Main.js -->
 		<script src="main.js"></script>
 	</body>
 </html>
