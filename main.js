@@ -57,3 +57,13 @@ scrollReveal.reveal(`
    #testimonials header, #testimonials .testimonials,
    #contact .text, #contact .links
 `, { interval: 100 })
+
+/* NOTE: back-to-top botão voltar para o topo */
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+   if (window.scrollY >= 560) {
+      backToTopButton.classList.add('show')
+   } else {
+      backToTopButton.classList.remove('show')
+   }
+})
