@@ -37,7 +37,6 @@ img {
 	--title-font-size: 1.875rem;
 	--subtitle-font-size: 1rem;
 
-	/* title fonts */
 	--title-font: 'Poppins', sans-serif;
 	--body-font: 'DM Sans', sans-serif;
 }
@@ -61,7 +60,7 @@ body {
 }
 
 .button {
-	background: var(--base-color);
+	background-color: var(--base-color);
 	color: var(--text-color-light);
 	height: 3.5rem;
 	display: inline-flex;
@@ -93,6 +92,7 @@ body {
 		hsla(var(--hue), 36%, 57%, 1)
 	);
 }
+
 /*============================ TODO: Layout ================================*/
 .container {
 	margin-left: 1.5rem;
@@ -138,24 +138,10 @@ body {
 }
 
 #header.scroll {
-	/* background: var(--base-color); */
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
-/*
-#header.scroll .logo span {
-	color: white;
-}
-
-#header.scroll .icon-menu {
-	color: white;
-} */
-
-/* main {
-	margin-top: calc(var(--header-height) + 2rem);
-} */
 
 /*============================ TODO: Logo ================================*/
-
 .logo {
 	font: 700 1.31rem var(--title-font);
 	color: var(--title-color);
@@ -243,7 +229,7 @@ nav.show .menu ul {
 	display: grid;
 }
 
-nav ul.grid {
+nav.show ul.grid {
 	gap: 4rem;
 }
 
@@ -261,6 +247,7 @@ nav .icon-close {
 	position: absolute;
 	top: -1.5rem;
 	right: 1.5rem;
+
 	transition: 0.2s;
 }
 
@@ -389,6 +376,8 @@ nav.show div.icon-close {
 #testimonials .container {
 	margin-left: 0;
 	margin-right: 0;
+	position: relative;
+	overflow: hidden;
 }
 
 #testimonials header {
@@ -412,7 +401,6 @@ nav.show div.icon-close {
 
 #testimonials blockquote p span {
 	font: 700 2.5rem serif;
-
 	position: absolute;
 	top: -0.375rem;
 	left: -1.875rem;
@@ -437,6 +425,11 @@ nav.show div.icon-close {
 .swiper-slide {
 	height: auto;
 	padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+	width: 0.75rem;
+	height: 0.75rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -537,13 +530,12 @@ footer .social a:hover {
 	transform: translateY(0);
 }
 
-/* Responsivo */
 /* === TODO: MEDIA QUERIES === */
 /* extra large devices: +1200 > */
 @media (min-width: 1200px) {
 	/* reusable class */
 	.container {
-		max-width: 1200px;
+		max-width: 1120px;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -644,7 +636,7 @@ footer .social a:hover {
 	}
 
 	/* HACK: Footer */
-	footer .scetion {
+	footer.section {
 		padding: 3.75rem 0;
 	}
 
@@ -658,10 +650,10 @@ footer .social a:hover {
 		font-size: 2.25rem;
 	}
 }
-/* large devices: 1023 > */
-/* large devices: 992 > */
+/* NOTE: large devices: 1023 > */
+/* NOTE: large devices: 992 > */
 @media (min-width: 992px) {
-	.root {
+	:root {
 		--title-font-size: 2.25rem;
 		--subtitle-font-size: 1.125rem;
 	}
