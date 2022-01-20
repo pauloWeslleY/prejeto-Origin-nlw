@@ -619,6 +619,14 @@ footer .social a:hover {
 		padding-right: 3rem;
 	}
 
+	#services .cards i {
+		transition: 0.3s cubic-bezier(0.1, -0.6, 0.2, 0);
+	}
+
+	#services .cards i:hover {
+		transform: translateY(-9px);
+	}
+
 	/* HACK: Testimonials */
 	#testimonials .container {
 		margin-left: auto;
@@ -651,7 +659,7 @@ footer .social a:hover {
 	}
 }
 /* NOTE: large devices: 1023 > */
-@media (min-width: 1023px) {
+@media (min-width: 992px) and (max-width: 1200px) {
 	/* reusable class */
 
 	/* HACK: Navigation */
@@ -679,6 +687,42 @@ footer .social a:hover {
 	nav .icon-menu {
 		display: none;
 	}
+
+	#about .text,
+	#services header,
+	#testimonials header,
+	#contact {
+		text-align: center;
+	}
+
+	#contact .links {
+		display: flex;
+		justify-content: center;
+	}
+
+	/* HACK: Services */
+	.cards {
+		grid-template-columns: 1fr 1fr;
+	}
+	.card {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	/* HACK: Footer */
+	footer.section {
+		padding: 3.75rem 6.56rem;
+	}
+
+	footer .container {
+		grid-auto-flow: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	footer .logo {
+		font-size: 2.25rem;
+	}
 }
 /* NOTE: large devices: 992 > */
 @media (min-width: 992px) {
@@ -688,9 +732,9 @@ footer .social a:hover {
 	}
 }
 /* medium devices: 767 > */
-/* @media (min-width: 767px) { */
-/* HACK: Header Scroll */
-/* #header.scroll {
+@media (min-width: 767px) and (max-width: 992px) {
+	/* HACK: Header Scroll */
+	#header.scroll {
 		background: var(--base-color);
 		box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 	}
@@ -701,41 +745,45 @@ footer .social a:hover {
 
 	#header.scroll .icon-menu {
 		color: white;
-	} */
+	}
 
-/* HACK: Title */
-/* .title {
+	/* HACK: Title */
+	.title {
 		color: var(--title-color);
 		-webkit-font-smoothing: auto;
 		text-align: center;
-	} */
+	}
 
-/* HACK: About */
-/* #about .text p {
-		text-align: center;
-	} */
-
-/* HACK: Services */
-/* #services p.subtitle {
+	/* HACK: About */
+	#about .text,
+	#services header,
+	#testimonials header,
+	#contact {
 		text-align: center;
 	}
 
+	#contact .links {
+		display: flex;
+		justify-content: center;
+	}
+
+	/* HACK: Services */
 	.cards {
 		grid-template-columns: 1fr 1fr;
 	}
 	.card {
 		padding-left: 3rem;
 		padding-right: 3rem;
-	} */
+	}
 
-/* HACK: Footer */
-/* footer.section {
-		padding: 3.75rem 3rem;
+	/* HACK: Footer */
+	footer.section {
+		padding: 3.75rem 5rem;
 	}
 
 	footer .container {
 		grid-auto-flow: column;
 		align-items: center;
 		justify-content: space-between;
-	} */
-/* } */
+	}
+}
