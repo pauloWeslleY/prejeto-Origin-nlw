@@ -41,11 +41,21 @@ const swiper = new Swiper('.swiper', {
    },
    mousewheel: true,
    keyboard: true,
+   // responsive breakpoints
    breakpoints: {
-      767: {
+      480: {
+         slidesPerView: 1,
+         setWrapperSize: true
+      },
+      768: {
+         slidesPerView: 1,
+         setWrapperSize: true
+      },
+      1200: {
          slidesPerView: 2,
          setWrapperSize: true
       }
+
    }
 })
 
